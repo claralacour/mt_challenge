@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Press+Start+2P&display=swap');
+
 :root{
     --bg-color: #1D1D1E; 
     --purple: #4A33CF; 
@@ -13,6 +15,11 @@ body{
         linear-gradient(to bottom, rgba(128, 128, 128, 0.377) 1px, transparent 1px);
 }
 
+.wave-top{
+    overflow: none;
+}
+
 h1{
-    font-style: ;
+    font-family: "Press Start 2P", serif;
+    color: white;
 }
