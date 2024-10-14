@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Press+Start+2P&display=swap');
 
 :root {
-    --bg-color: #1D1D1E; 
+    --bg-color: #0F0F0F; 
     --purple: #4A33CF; 
     --yellow: #FFDD00;
     --magenta: #D900FF;
+    --gridcolor: rgba(0, 0, 146, 0.62); 
     --marginphone: 60px;
 }
 
@@ -12,8 +13,8 @@ body {
     background-color: var(--bg-color);
     background-size: 30px 30px;
     background-image:
-        linear-gradient(to right, rgba(128, 128, 128, 0.377) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(128, 128, 128, 0.377) 1px, transparent 1px);
+        linear-gradient(to right, rgba(128, 128, 128, 0.178) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(128, 128, 128, 0.178) 1px, transparent 1px);
     margin: var(--marginphone);
 }
 
@@ -45,4 +46,25 @@ h1 {
     color: white;
     font-size: 20px;
     text-align: center;
+}
+
+h2 {
+    font-family: "Play", serif;
+    color: var(--magenta);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.grid-item{
+    background-color: var(--gridcolor);
+    height: 120px;
 }
