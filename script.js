@@ -1,6 +1,7 @@
 const gridItems = document.querySelectorAll('.grid-item');
 const modals = document.querySelectorAll('.modal');
-const closeButtons = document.querySelectorAll('.gridbutton');
+const closeButtons = document.querySelectorAll('.close');
+const gridButtons = document.querySelectorAll('.gridbutton');
 
 //animation start og stop
 
