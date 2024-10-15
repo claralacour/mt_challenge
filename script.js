@@ -1,5 +1,5 @@
 const gridItems = document.querySelectorAll('.grid-item');
-const modals = document.querySelectorAll('.modal');
+const modals = [...document.querySelectorAll('.modal')];
 const closeButtons = document.querySelectorAll('.close');
 const gridButtons = document.querySelectorAll('.gridbutton');
 
@@ -15,6 +15,27 @@ gridItems.forEach(item => {
 });
 
 //åbne modal
+gridButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        const currentModal = modals[index];
+        if(currentModal) {
+            currentModal.style.display ='block';
+        }
+    });
+});
+
+//lukke modal
+closeButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        const currentModal = modals[index];
+        if(currentModal) {
+            currentModal.style.display ='none';
+        }
+    })
+});
+
+
+
 
 
 

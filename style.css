@@ -135,7 +135,7 @@ p {
 /* modal */
 
 .modal {
-    display: block; 
+    display: none; 
     position: fixed;
     z-index: 1;
     left: 0;
@@ -165,7 +165,6 @@ p {
     width: 100%;
     border-bottom: solid 2px black;
     border-radius: 10px 10px 0 0;
-    text-align: right;
     padding: 2px 12px 2px 12px;
     box-sizing: border-box;
 }
@@ -178,5 +177,12 @@ p {
     font-weight: 800;
     cursor: pointer;
     color: var(--yellow);
+}
+
+.modalimg {
+    display: block;
+    margin: 20px auto;
+    max-height: 100px;
+    padding: 5px;
 }
 
