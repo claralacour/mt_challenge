@@ -11,12 +11,12 @@
     <header>
         <img class="wave top" src="img/waves.svg" alt="waves">
         <h1>Retro videogame characters</h1>
-        <h2>Af Clara la Cour<br>Morningtrain challenge 2024</h2>
+        <h4>Af Clara la Cour<br>Morningtrain challenge 2024</h4>
     </header>
     <main>
         <div class="container">
             <div class="grid-item">
-                <button class="gridbutton">
+                <button id="modalBtn" class="gridbutton"> 
                     <img class="character" src="img/characters/mario.png" alt="super mario">
                 </button>
             </div>
@@ -57,6 +57,18 @@
             </div>
         </div>
     </main>
+    <div class="modal" id="mario-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close"><h3>super Mario(1985)</h3>&times;</span>
+        </div>
+            <h2>You found a fun fact!</h2>
+            <p>Marios oprindelige navn er "Jump Man" fra hans debut i Donkey Kong(1981)
+                <br>
+                Mario har sin ikoniske hat, fordi det var for svært at animere hans hår da han blev skabt.
+            </p>
+        </div>
+    </div>
     <img class="wave bottom" src="img/waves.svg" alt="waves">
 </body>
 </html>

@@ -5,6 +5,7 @@
     --purple: #4A33CF; 
     --yellow: #FFDD00;
     --magenta: #D900FF;
+    --grey: #414141; 
     --gridcolor: rgba(0, 0, 146, 0.62); 
     --marginphone: 60px;
 }
@@ -37,6 +38,7 @@ body {
 }
 
 .bottom {
+    position: fixed;
     transform: rotate(180deg);
     bottom: 0;
 }
@@ -49,10 +51,32 @@ h1 {
 }
 
 h2 {
+    font-family: "Press Start 2P", serif;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+h3 {
+    font-family: "Press Start 2P", serif;
+    color: white;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+h4 {
     font-family: "Play", serif;
     color: var(--magenta);
     text-align: center;
     font-size: 16px;
+    font-weight: 400;
+}
+
+p {
+    font-family: "Play", serif;
+    color: white;
+    text-align: center;
+    font-size: 15px;
     font-weight: 400;
 }
 
@@ -64,6 +88,8 @@ h2 {
         transform: translateY(-10px);
     }
 }
+
+/* css grid */
 
 .container {
     display: grid;
@@ -105,3 +131,52 @@ h2 {
     padding: 0;
     cursor: pointer;
 }
+
+/* modal */
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: var(--grey);
+    border-radius: 10px;
+    border: solid 2px black;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal-content p {
+    padding: 10px;
+}
+
+.modal-header {
+    background-color: var(--purple);
+    width: 100%;
+    border-bottom: solid 2px black;
+    border-radius: 10px 10px 0 0;
+    text-align: right;
+    padding: 2px 12px 2px 12px;
+    box-sizing: border-box;
+}
+
+.close {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 800;
+    cursor: pointer;
+    color: var(--yellow);
+}
+

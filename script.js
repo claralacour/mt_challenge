@@ -1,4 +1,6 @@
 const gridItems = document.querySelectorAll('.grid-item');
+const modals = document.querySelectorAll('.modal');
+const closeButtons = document.querySelectorAll('.gridbutton');
 
 //animation start og stop
 
@@ -10,4 +12,8 @@ gridItems.forEach(item => {
         item.classList.remove('hovered');
     });
 });
+
+//åbne modal
+
+
 
