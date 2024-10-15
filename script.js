@@ -18,8 +18,13 @@ gridItems.forEach(item => {
 gridButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
         const currentModal = modals[index];
+        const gridItem = gridItems[index];
         if(currentModal) {
-            currentModal.style.display ='block';
+            gridItem.style.animation = 'turn 0.5s forwards';
+            setTimeout(() => {
+                currentModal.style.display ='block';
+                gridItem.style.animation = '';
+            }, 500);
         }
     });
 });
@@ -31,8 +36,17 @@ closeButtons.forEach((button, index) => {
         if(currentModal) {
             currentModal.style.display ='none';
         }
-    })
+    });
 });
+
+//hvis man klikker udenfor vinduet luk modal
+window.onclick = function(event) {
+     modals.forEach(modal => {
+        if(event.target === modal) {
+            modal.style.display = 'none';
+        }
+     });
+};
 
 
 

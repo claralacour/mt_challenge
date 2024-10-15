@@ -107,6 +107,7 @@ p {
     justify-content: center;
     align-items: center;
     animation: bounce 2s infinite ease-in-out;
+    transition: transform 0.5s ease;
 }
 
 .character{
@@ -130,6 +131,20 @@ p {
     border: none;
     padding: 0;
     cursor: pointer;
+}
+
+@keyframes turn {
+    0% {
+        transform: rotateX(0deg);
+    }
+    50% {
+        transform: rotateX(90deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
 }
 
 /* modal */
