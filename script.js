@@ -3,8 +3,32 @@ const modals = [...document.querySelectorAll('.modal')];
 const closeButtons = document.querySelectorAll('.close');
 const gridButtons = document.querySelectorAll('.gridbutton');
 
-//animation start og stop
+document.addEventListener("DOMContentLoaded", function() {
+    const loadingText = "LOADING. . .";
+    const loadingElement = document.getElementById('loading-text');
+    const loadingScreen = document.getElementById('loading-screen');
 
+    let index = 0;
+
+    function typeLetter() {
+        if (index < loadingText.length) {
+            loadingElement.textContent += loadingText.charAt(index); // Fix here
+            index++;
+            setTimeout(typeLetter, 400);
+        } else {
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 1000);
+        }
+    }
+    
+    document.body.style.overflow = 'hidden';
+    typeLetter();
+});
+
+
+//animation start og stop
 gridItems.forEach(item => {
     item.addEventListener('mouseenter', () => {
         item.classList.add('hovered');
