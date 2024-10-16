@@ -229,6 +229,9 @@ p {
     h2{
         font-size: 14px;
     }
+    h3 {
+        font-size: 9px;
+    }
     h4{
         font-size: 18px;
     }
@@ -236,3 +239,21 @@ p {
         max-width: 350px;
     }
 }
+
+/*desktop*/
+@media only screen and (min-width: 800px) {
+    .grid-item:nth-last-child(2), 
+    .grid-item:nth-last-child(1) {
+        grid-column: auto;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr); 
+    }
+    .character{
+        height: 115px;
+    }
+}
+
+
